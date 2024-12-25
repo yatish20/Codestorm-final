@@ -1,0 +1,130 @@
+/* General Styles */
+.dashboard-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    margin: 20px;
+    margin-top: 110px;
+    margin-left: 0;
+}
+
+/* Left Grid Styles */
+.left-grid {
+    width: 25%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    overflow-y: auto;
+    margin-left: 0;
+}
+
+.left-grid h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dropdown {
+    margin-bottom: 10px;
+}
+
+.dropdown-toggle {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dropdown-menu {
+    background-color: #efefef;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.dropdown-item.selected {
+    background-color: #2e62e6;
+}
+
+.dropdown-item:hover {
+    background-color: #2e62e6;
+}
+
+/* Right Grid Styles */
+.right-grid {
+    width: 75%;
+    padding: 20px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.videotitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.video-container,
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-container video {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.content-html {
+    width: 80%;
+    max-width: 800px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.content-html ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    background-color: #2e62e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #1b4bb8;
+}
+
+/* Scrollbar Styling */
+.left-grid::-webkit-scrollbar,
+.right-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.left-grid::-webkit-scrollbar-thumb,
+.right-grid::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+    margin-left: 0;
+}

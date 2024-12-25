@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #2970ff; /* Background color */
+  padding: 10px 20px; /* Padding around the navbar */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it overlays above other elements */
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  /* Close button */
+  .close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Profile menu styling */
+  .profile-menu {
+    list-style: none;
+    position: absolute;
+    top: 50px; /* Adjust based on profile photo position */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1001; /* Above other elements but below modal */
+  }
+  
+  .profile-menu li {
+    padding: 0.5rem 1rem;
+  }
+  
+  .profile-menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .profile-menu-button:hover {
+    background-color: #f0f0f0;
+  }
+/* Navbar content only visible on desktop */
+.navbar-content {
+  display: flex; /* Default display */
+  align-items: center; /* Center items vertically */
+}
+
+/* Hide menu button in desktop mode */
+.navbar-toggler {
+  display: none; /* Hide by default */
+}
+
+/* Show hamburger button only on mobile */
+@media (max-width: 768px) {
+  .navbar-content {
+    display: none; /* Hide content on mobile */
+  }
+
+  .navbar-toggler {
+    display: block; /* Show hamburger button on mobile */
+    background: none;
+    border: none;
+    color: white; /* Change color as needed */
+    font-size: 24px;
+  }
+
+  /* Sliding menu styles */
+  .sliding-menu {
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    width: 100%;
+    background: #fff; /* Background color for sliding menu */
+    border: 1px solid #ccc; /* Optional border */
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+
+  .sliding-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sliding-menu li {
+    padding: 10px; /* Add some padding */
+  }
+}
+
+/* Profile menu styles */
+.profile-menu {
+  position: absolute;
+  top: 50px; /* Adjust as necessary */
+  right: 0;
+  background: white; /* Background color */
+  border: 1px solid #ccc; /* Optional border */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.navbar-brand {
+  padding: 15px;
+  color: #fff;
+  font-size: 26px; /* Increased font size */
+  font-weight: bold; /* Make text bold */
+  line-height: 1.5; /* Increase text height */
+  transition: transform 0.2s; /* Smooth transition for scaling */
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative; /* Important for the selector */
+}
+
+.nav-item {
+  margin: 0 15px; /* Space between items */
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: 15px;
+  font-size: 18px; /* Increased font size */
+  font-weight: bold; /* Make text bold */
+  line-height: 1.5; /* Increase text height */
+  transition: transform 0.2s ease-in-out; /* Smooth transition for scaling */
+}
+
+.nav-link:hover {
+  color: #fff; /* Change color on hover */
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+.nav-item.active .nav-link {
+  color: #fff; /* Active item color */
+}
+
+.profile {
+  margin-left: auto; /* Align profile to the right */
+}
+
+.profile-photo {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image covers the area */
+  border: 2px solid #fff; /* Optional: adds a border */
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4CAF50;
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  font-size: 26px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Desktop-only content */
+.desktop-only {
+  display: none;
+}
+
+.unlock-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.unlock-link:hover {
+  color: #ddd;
+}
+
+/* Profile for mobile view */
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Sliding menu for mobile */
+.sliding-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.sliding-menu.show {
+  transform: translateX(0);
+}
+
+.sliding-menu ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.sliding-menu li {
+  padding: 10px 0;
+}
+
+.sliding-menu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.sliding-menu li a:hover {
+  color: #4CAF50;
+}
+
+/* Mobile-only styles */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .sliding-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100vh;
+      background-color: white;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      transform: translateX(100%); /* Initially hidden off-screen */
+      transition: transform 0.3s ease-in-out;
+      z-index: 999;
+    }
+  
+    .sliding-menu.show {
+      transform: translateX(0); /* Slide into view */
+    }
+  
+    .navbar-toggler {
+      display: block; /* Show hamburger button for mobile */
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  
+    .navbar-content {
+      display: none; /* Hide normal navbar content */
+    }
+  
+    .mobile-only.profile {
+      display: flex;
+      align-items: center;
+    }
+  
+    .profile-photo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+  
+  /* Desktop-specific styles */
+  @media (min-width: 769px) {
+    .sliding-menu {
+      display: none; /* Hide sliding menu on desktop */
+    }
+  
+    .navbar-toggler {
+      display: none; /* Hide hamburger button on desktop */
+    }
+  }
+  
+

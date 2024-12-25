@@ -1,0 +1,317 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #2970ff;
+    color: #ecf0f1;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .navbar-menu li {
+    margin-left: 1rem;
+  }
+  
+  .navbar-menu a {
+    color: #ecf0f1;
+    text-decoration: none;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Hero Styles */
+  .hero {
+    
+    
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Learning Modules Styles */
+  .learning-modules {
+    padding: 4rem 2rem;
+  }
+  
+  .learning-modules h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .module-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .module-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .module-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .start-module-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-module-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Quiz Styles */
+  .quiz {
+    background-color: #f2f2f2;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+  }
+  
+  .question-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .answer-options {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .answer-options li {
+    margin-bottom: 1rem;
+  }
+  
+  .answer-options button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .answer-options button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Personalized Dashboard Styles */
+  .personalized-dashboard {
+    padding: 4rem 2rem;
+  }
+  
+  .progress-tracker {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .progress-item {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .progress-bar {
+    background-color: #ecf0f1;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+  }
+  
+  .progress-fill {
+    background-color: #2ecc71;
+    height: 100%;
+  }
+  
+  .recommendations {
+    background-color: #f2f2f2;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #2970ff;
+    color: #ecf0f1;
+    padding: 2rem 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 4200px;
+    margin: 0 auto;
+  }
+  
+  
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section a {
+    color: #ecf0f1;
+    text-decoration: none;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #34495e;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #2c3e50;
+      padding: 1rem;
+    }
+  
+    .navbar-menu.is-active {
+      display: flex;
+    }
+  
+    .navbar-menu li {
+      margin: 0.5rem 0;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .module-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .progress-tracker {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .profile {
+    position: relative;
+  }
+  
+  .profile-photo {
+    width: 40px; /* Adjust size as needed */
+    cursor: pointer;
+  }
+  
+  .profile-menu {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000; /* Ensure dropdown is above other content */
+  }
+  
+  .profile-menu li {
+    padding: 10px;
+  }
+  
+  .profile-menu li:hover {
+    background: #f0f0f0;
+  }
+  
